@@ -230,3 +230,86 @@
     background-clip: text;
     filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.4));
 }
+
+
+/* BULLETPROOF RESPONSIVE VIDEO */
+.video-hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.video-hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.hero-video {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 100% !important;
+    height: auto !important;  /* Changed */
+    min-height: 100% !important;  /* Added */
+    transform: translate(-50%, -50%) !important;  /* Added */
+    object-fit: contain !important;
+    z-index: 1 !important;
+}
+
+/* Hero Content */
+.hero-content-wrapper {
+    position: relative;
+    z-index: 10;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+}
+
+.hero-content-wrapper .row {
+    padding-bottom: 80px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .video-hero-container {
+        height: 100vh;
+    }
+    
+    .hero-content-wrapper .row {
+        padding-bottom: 40px;
+    }
+}
+
+
+/* Gradient Background */
+body {
+    background: linear-gradient(180deg, #011869 0%, #011a71 50%, #011869 100%) !important;
+    background-attachment: fixed;
+}
+
+/* Make sections transparent */
+.banner-section,
+.features-section,
+.about-section,
+.game-section,
+.why-section,
+.how-section,
+.faq-section,
+.top-section,
+.testimonial-section {
+    background: transparent !important;
+}
+
+/* Remove section background images */
+.game-section::before,
+.how-section::before,
+.top-section::before {
+    display: none !important;
+}
+
+/* Header color */
+.header {
+    background: #011869 !important;
+}
