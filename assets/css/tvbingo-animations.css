@@ -1,0 +1,232 @@
+/* TV Bingo Custom Animations & Styles */
+
+/* Swordfish Floating Element */
+.swordfish-container {
+    position: fixed;
+    top: 50%;
+    left: -200px;
+    width: 300px;
+    height: auto;
+    z-index: 9999;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+.swordfish-img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+}
+
+/* Hero Section Gradient Background */
+.banner-gradient-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0EA5E9 0%, #06B6D4 50%, #8B5CF6 100%);
+    z-index: 0;
+}
+
+.banner-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.banner-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/banner/bahamas-bg.png') center/cover;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+/* Floating Bubbles */
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.bubble-1 {
+    width: 80px;
+    height: 80px;
+    top: 20%;
+    left: 10%;
+}
+
+.bubble-2 {
+    width: 120px;
+    height: 120px;
+    top: 60%;
+    right: 15%;
+}
+
+.bubble-3 {
+    width: 60px;
+    height: 60px;
+    top: 40%;
+    left: 25%;
+}
+
+.bubble-4 {
+    width: 100px;
+    height: 100px;
+    top: 75%;
+    left: 60%;
+}
+
+/* Feature Cards */
+.features-section {
+    background: linear-gradient(180deg, #8B5CF6 0%, #EC4899 100%);
+    position: relative;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.feature-card__icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, #22D3EE, #F472B6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+}
+
+.feature-card__title {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.feature-card__text {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Animate Float for Banner Image */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Hero Title Styling */
+.hero-title {
+    font-size: 72px !important;
+    font-weight: 900;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+    font-size: 28px !important;
+    color: #FBBF24 !important;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .hero-title {
+        font-size: 48px !important;
+    }
+    .hero-subtitle {
+        font-size: 20px !important;
+    }
+    .swordfish-container {
+        width: 200px;
+    }
+}
+
+/* TV BINGO Logo-Colored Text */
+.tv-bingo-logo-text {
+    display: inline-block;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.tv-bingo-logo-text .letter-t {
+    color: #10B981; /* Green like logo */
+    text-shadow: 3px 3px 0 rgba(16, 185, 129, 0.3);
+}
+
+.tv-bingo-logo-text .letter-v {
+    color: #3B82F6; /* Blue like logo */
+    text-shadow: 3px 3px 0 rgba(59, 130, 246, 0.3);
+}
+
+.tv-bingo-logo-text .letter-b {
+    color: #EF4444; /* Red like logo */
+    text-shadow: 3px 3px 0 rgba(239, 68, 68, 0.3);
+}
+
+.tv-bingo-logo-text .letter-ingo {
+    background: linear-gradient(90deg, #F59E0B 0%, #F97316 50%, #FB923C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+    filter: drop-shadow(3px 3px 0 rgba(251, 146, 60, 0.3));
+}
+
+/* Alternative: Full Gradient Version */
+.tv-bingo-gradient {
+    background: linear-gradient(90deg, 
+        #10B981 0%,      /* Green T */
+        #3B82F6 20%,     /* Blue V */
+        #EF4444 35%,     /* Red B */
+        #F59E0B 50%,     /* Orange i */
+        #F97316 70%,     /* Orange-red n */
+        #FB923C 85%      /* Light orange go */
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.4));
+}

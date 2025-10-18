@@ -11,26 +11,30 @@ $lh-p: 1.7;
 $title-color: #fff;
 
 // Essential Colors
-$base-color: #FFC827;
-$gradient-base: linear-gradient( 0deg, #ff9c19 40%, #ffdd2d 110%);
-$gradient-base-rev: linear-gradient( 180deg, #ffdd2d 40%, #ECD40E 100%);
+$base-color: #22D3EE;
+$gradient-base: linear-gradient(135deg, #06B6D4 0%, #22D3EE 50%, #A5F3FC 100%);
+$gradient-base-rev: linear-gradient(315deg, #A5F3FC 0%, #22D3EE 50%, #06B6D4 100%);
  
 
 
-$primary-color: #ff5201;
+$primary-color: #F472B6;
 $secondary-color: #78818A;
 
 $body-color : rgba(255, 255, 255, 0.8);
 $border-color: rgba(255, 255, 255, 0.17);
 
-$section-bg : #2e0327;
-$body-bg : #350b2d;
+$section-bg : #0891B2;
+$body-bg : #0E7490;
 
 $theme-one: #FF3653;
 $theme-two: #18D39E;
 $theme-three: #0C93D2;
 $theme-four: #F6A200;
 $theme-five: #09389E;
+$bahamas-coral: #FB923C;
+$bahamas-sunset: #FBBF24;
+$bahamas-ocean: #0EA5E9;
+$bahamas-sand: #FDE68A;
 
 .theme-one {
    color: $theme-one !important;
