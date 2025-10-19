@@ -1,5 +1,72 @@
 /* TV Bingo Custom Animations & Styles */
 
+/* TV Bingo - Animation Support Styles */
+
+/* Ensure all content is visible by default */
+.feature-card,
+.feature-card__icon,
+.game-item,
+.banner-content,
+.banner-content__title,
+.banner-content__subtitle,
+.banner-thumb,
+.about-content,
+.about-thumb,
+.about-thumb img,
+.why-item,
+.why-item__thumb,
+.how-item,
+.how-item *,
+.how-item__thumb,
+.how-item__thumb *,
+.how-item__content,
+.how-item__content *,
+.how-item .badge,
+.how-item i,
+.how-item .title,
+.faq-item,
+.testimonial-item,
+.investor-item,
+.section-header {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Force How section to be visible */
+.how-section * {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Smooth transitions for interactive elements */
+.feature-card,
+.game-item,
+.why-item,
+.how-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Optional: Add will-change for better performance on animated elements */
+.feature-card,
+.game-item {
+    will-change: transform;
+}
+
+/* Ensure buttons remain visible */
+.cmn--btn {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Fix any potential z-index issues */
+.banner-content,
+.feature-card,
+.game-item,
+.about-content {
+    position: relative;
+    z-index: 1;
+}
+
 /* Swordfish Floating Element */
 .swordfish-container {
     position: fixed;

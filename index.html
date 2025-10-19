@@ -16,6 +16,8 @@
     <!-- Main css -->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/tvbingo-animations.css">
+    <link rel="stylesheet" href="assets/css/tvbingo-custom-fixes.css">
+    <link rel="stylesheet" href="assets/css/bingo-preloader.css">
 </head>
 <body data-bs-spy="scroll" data-bs-offset="170">
 
@@ -24,28 +26,21 @@
         <img src="assets/images/banner/vibranfishnobg.png" alt="TV Bingo Swordfish" class="swordfish-img">
     </div> -->
 
-    <div class="overlay"></div>
-    <div class="preloader">
-        <div class="scene" id="scene">
-            <input type="checkbox" id="andicator" />
-            <div class="cube">
-                <div class="cube__face cube__face--front"><i></i></div>
-                <div class="cube__face cube__face--back"><i></i><i></i></div>
-                <div class="cube__face cube__face--right">
-                    <i></i> <i></i> <i></i> <i></i> <i></i>
-                </div>
-                <div class="cube__face cube__face--left">
-                    <i></i> <i></i> <i></i> <i></i> <i></i> <i></i>
-                </div>
-                <div class="cube__face cube__face--top">
-                    <i></i> <i></i> <i></i>
-                </div>
-                <div class="cube__face cube__face--bottom">
-                    <i></i> <i></i> <i></i> <i></i>
-                </div>
-            </div>
-        </div>
+    <!-- Bingo Ball Preloader -->
+<div class="overlay"></div>
+<div class="preloader">
+    <div class="preloader-logo">TV BINGO</div>
+    
+    <div class="bingo-balls-container">
+        <div class="bingo-ball">B</div>
+        <div class="bingo-ball">I</div>
+        <div class="bingo-ball">N</div>
+        <div class="bingo-ball">G</div>
+        <div class="bingo-ball">O</div>
     </div>
+    
+    <div class="loading-text">Loading...</div>
+</div>
 
     <!-- Header -->
     <div class="header">
@@ -116,8 +111,8 @@
         <div class="container">
             <div class="banner-wrapper d-flex flex-wrap align-items-center">
                 <div class="banner-content slide-in-content">
-                    <h1 class="banner-content__title">Play <span class="text--base">Online Casino</span> & Win Money Unlimited</h1>
-                    <p class="banner-content__subtitle">PLAY CASINO AND EARN CRYPTO IN ONLINE. THE ULTIMATE ONLINE CASINO PLATFORM.</p>
+                    <h1 class="banner-content__title">Play <span class="text--base">TV BINGO</span> & Win Big in Bahamas</h1>
+                    <p class="banner-content__subtitle">PLAY AND EARN MONEY ONLINE. THE ULTIMATE ONLINE BINGO PLATFORM IN THE CARIBBEAN.</p>
                     <div class="button-wrapper">
                         <a href="#" class="cmn--btn active btn--lg"><i class="las la-play"></i> Play Now</a>
                         <a href="sign-up.html" class="cmn--btn btn--lg">Sign Up</a>
@@ -745,6 +740,7 @@
     <script src="assets/js/gsap.min.js"></script>
     <script src="assets/js/ScrollTrigger.min.js"></script>
     <script src="assets/js/tvbingo-gsap.js"></script>
+    <script src="assets/js/bingo-preloader.js"></script>
 
     <!-- jQuery library -->
     <script src="assets/js/lib/jquery-3.6.0.min.js"></script>

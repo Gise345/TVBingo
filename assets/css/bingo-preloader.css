@@ -1,0 +1,197 @@
+/* TV Bingo - Bingo Ball Preloader Styles */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0a1e4d 0%, #1a3a6e 50%, #2a4a8e 100%);
+    z-index: 99999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+    background: transparent;
+}
+
+/* Bingo Ball Container */
+.bingo-balls-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Individual Bingo Ball */
+.bingo-ball {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    position: relative;
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.3),
+        inset 0 -5px 15px rgba(0, 0, 0, 0.2),
+        inset 0 5px 15px rgba(255, 255, 255, 0.3);
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+/* Ball Colors - TV Bingo logo colors (Blue, Orange, Yellow, Green, Blue, Orange) */
+.bingo-ball:nth-child(1) {
+    /* Blue - like "T" in TVBingo */
+    background: linear-gradient(135deg, #3d9be9 0%, #2576c7 100%);
+    animation-delay: 0s;
+}
+
+.bingo-ball:nth-child(2) {
+    /* Orange - like "V" in TVBingo */
+    background: linear-gradient(135deg, #ff6b3d 0%, #e64a19 100%);
+    animation-delay: 0.2s;
+}
+
+.bingo-ball:nth-child(3) {
+    /* Yellow - like "B" in TVBingo */
+    background: linear-gradient(135deg, #ffc33d 0%, #f5a623 100%);
+    animation-delay: 0.4s;
+}
+
+.bingo-ball:nth-child(4) {
+    /* Green - like "in" in TVBingo */
+    background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+    animation-delay: 0.6s;
+}
+
+.bingo-ball:nth-child(5) {
+    /* Blue - like "go" in TVBingo */
+    background: linear-gradient(135deg, #3d9be9 0%, #2576c7 100%);
+    animation-delay: 0.8s;
+}
+
+/* Shine effect on balls */
+.bingo-ball::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    width: 35%;
+    height: 35%;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    filter: blur(8px);
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-30px) scale(1.1);
+    }
+}
+
+/* Loading Text */
+.loading-text {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* TV Bingo Logo in Preloader (optional) */
+.preloader-logo {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    animation: fadeInOut 2s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0.5;
+        transform: translateX(-50%) scale(0.95);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+/* Hide preloader when page loads */
+body.loaded .overlay,
+body.loaded .preloader {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bingo-ball {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+    
+    .bingo-balls-container {
+        gap: 12px;
+    }
+    
+    .loading-text {
+        font-size: 18px;
+    }
+    
+    .preloader-logo {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bingo-ball {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .bingo-balls-container {
+        gap: 8px;
+    }
+    
+    .loading-text {
+        font-size: 16px;
+    }
+}

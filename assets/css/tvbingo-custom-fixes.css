@@ -1,0 +1,47 @@
+/* TV Bingo - Custom Fixes */
+
+/* Fix header background to match page background */
+.header {
+    background-color: #0a1e4d !important; /* Deep blue matching the page */
+    background: linear-gradient(135deg, #0a1e4d 0%, #1a3a6e 100%) !important;
+}
+
+.header-bottom {
+    background-color: transparent !important;
+}
+
+.header-bottom-area {
+    background-color: transparent !important;
+}
+
+/* Reduce large space between banner and Why TV Bingo section */
+.banner-section-secondary {
+    padding-bottom: 60px !important; /* Reduced from default */
+    margin-bottom: 0 !important;
+}
+
+.features-section {
+    padding-top: 60px !important; /* Reduced from default */
+    margin-top: 0 !important;
+}
+
+/* Also reduce space after video hero if needed */
+.video-hero-section {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Ensure consistent spacing throughout */
+.padding-top {
+    padding-top: 60px !important;
+}
+
+.padding-bottom {
+    padding-bottom: 60px !important;
+}
+
+/* Optional: Make header slightly transparent for modern look */
+.header {
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
